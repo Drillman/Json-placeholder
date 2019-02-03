@@ -1,3 +1,6 @@
 const { JsonPlaceholder } = require('../build/main')
 
-console.log(new JsonPlaceholder.Users())
+const placeholder = new JsonPlaceholder()
+placeholder.Users('as3')
+  .then(result => console.log(result))
+  .catch(error => console.error(error))
